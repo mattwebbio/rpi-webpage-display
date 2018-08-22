@@ -2,6 +2,7 @@
 
 echo "Enter URL you'd like the browser to open at boot:"
 read pageURL
+printf -v pageURL "%q\n" "$pageURL"
 echo "How often (in minutes) do you want the page to refresh? (0 to disable)"
 read refreshRate
 while ! [[ $refreshRate =~ ^-?[0-9]+$ ]]
@@ -11,7 +12,7 @@ do
     read refreshRate
 done
 
-HOMEDIR=~
+printf -v HOMEDIR "%q\n" ~
 
 echo "export DISPLAY=:0" > ~/rpi-webpage-display-atBoot.sh
 echo "chromium-browser --no-first-run --disable --disable-translate --disable-infobars ----disable-session-crashed-bubble --disable-suggestions-service --disable-save-password-bubble --start-maximized --kiosk \"${pageURL}\" &" >> ~/rpi-webpage-display-atBoot.sh
