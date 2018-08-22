@@ -2,7 +2,7 @@
 
 echo "Enter URL you'd like the browser to open at boot:"
 read pageURL
-echo "How often (in seconds) do you want the page to refresh? (0 to disable)"
+echo "How often (in minutes) do you want the page to refresh? (0 to disable)"
 read refreshRate
 while [[ $refreshRate =~ ^-?[0-9]+$ ]]
 do
