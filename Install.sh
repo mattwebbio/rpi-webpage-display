@@ -19,6 +19,9 @@ do
     read -p "How long to wait before launching browser (in seconds)? (0 to disable, 60-120 recommended so network has time to connect): " launchWait
 done
 
+clear
+echo "Okay, configuring now..."
+
 HOMEDIR=~
 
 # Allow Pi time to boot
