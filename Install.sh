@@ -12,11 +12,11 @@ do
     read -p "How often (in minutes) do you want the page to refresh? (0 to disable): " refreshRate
 done
 
-read -p "How long to wait before launching browser (in seconds)? (0 to disable, 60-120 recommended so network has time to connect): " launchWait
+read -p "How long to wait before launching browser (in seconds)? (0 to disable, 60-120 recommended so network has ample time to connect): " launchWait
 while ! [[ $launchWait =~ ^-?[0-9]+$ ]]
 do
     echo "Error: please enter an integer."
-    read -p "How long to wait before launching browser (in seconds)? (0 to disable, 60-120 recommended so network has time to connect): " launchWait
+    read -p "How long to wait before launching browser (in seconds)? (0 to disable, 60-120 recommended so network has ample time to connect): " launchWait
 done
 
 clear
