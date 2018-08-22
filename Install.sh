@@ -4,7 +4,7 @@ echo "Enter URL you'd like the browser to open at boot:"
 read pageURL
 echo "How often (in minutes) do you want the page to refresh? (0 to disable)"
 read refreshRate
-while [[ $refreshRate =~ ^-?[0-9]+$ ]]
+while ! [[ $refreshRate =~ ^-?[0-9]+$ ]]
 do
     echo "Error: please enter an integer."
     echo "How often (in minutes) do you want the page to refresh? (0 to disable)"
