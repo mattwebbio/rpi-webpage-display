@@ -18,7 +18,7 @@ HOMEDIR=~
 
 echo "export DISPLAY=:0" > ~/rpi-webpage-display-atBoot.sh
 echo "chromium-browser --no-first-run --disable --disable-translate --disable-infobars ----disable-session-crashed-bubble --disable-suggestions-service --disable-save-password-bubble --start-maximized --kiosk \"${pageURL}\" &" >> ~/rpi-webpage-display-atBoot.sh
-echo "xset s off && xset -dpms && xset s noblank"
+echo "xset s off && xset -dpms && xset s noblank" >> ~/rpi-webpage-display-atBoot.sh
 sudo chmod +x "${HOMEDIR}/rpi-webpage-display-atBoot.sh"
 (crontab -l 2>/dev/null; echo "@reboot ${HOMEDIR}/rpi-webpage-display-atBoot.sh") | crontab -
 
