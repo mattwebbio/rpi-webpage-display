@@ -31,7 +31,7 @@ then
     echo "rm -rf ~/.cache/chromium/*" >> ~/rpi-webpage-display-atBoot.sh
 fi
 echo "sed -i 's/"exited_cleanly": false/"exited_cleanly": true/' ~/.config/chromium/Default/Preferences" >> ~/rpi-webpage-display-atBoot.sh
-echo "sed -i 's/"exit_type": Crashed/"exit_type": normal/' ~/.config/chromium/Default/Preferences" >> ~/rpi-webpage-display-atBoot.sh
+echo "sed -i 's/"exit_type": "Crashed"/"exit_type": "normal"/' ~/.config/chromium/Default/Preferences" >> ~/rpi-webpage-display-atBoot.sh
 echo "chromium-browser --no-first-run --disable --disable-translate --disable-infobars --disable-session-crashed-bubble --disable-translate --disable-suggestions-service --disable-save-password-bubble --noerrdialogs --start-maximized --kiosk \"${pageURL}\" &" >> ~/rpi-webpage-display-atBoot.sh
 sudo chmod +x "${HOMEDIR}/rpi-webpage-display-atBoot.sh"
 (crontab -l 2>/dev/null; echo "@reboot ${HOMEDIR}/rpi-webpage-display-atBoot.sh") | crontab -
