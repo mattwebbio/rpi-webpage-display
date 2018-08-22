@@ -12,7 +12,7 @@ do
     read refreshRate
 done
 
-printf -v HOMEDIR "%q\n" ~
+HOMEDIR=~
 
 echo "export DISPLAY=:0" > ~/rpi-webpage-display-atBoot.sh
 echo "chromium-browser --no-first-run --disable --disable-translate --disable-infobars ----disable-session-crashed-bubble --disable-suggestions-service --disable-save-password-bubble --start-maximized --kiosk \"${pageURL}\" &" >> ~/rpi-webpage-display-atBoot.sh
