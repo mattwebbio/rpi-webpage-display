@@ -1,8 +1,6 @@
 # Raspberry Pi Webpage Display Script
 <img src="https://user-images.githubusercontent.com/420820/44598152-ed178d00-a786-11e8-98c2-c0e451904e3e.JPG" height="300" />
-I have Pi-powered Google Calendar displays all over the place - I wrote a script to make it easy to make more of them (or other similiar displays that just use a web browser).
-
-The install script sets a cron job to launch a fullscreen Chromium window in kiosk mode at boot, disabling screen timeout. Configurables set during install:
+I have Pi-powered Google Calendar displays all over the place - I wrote a script to make it easy to make more of them (or other similiar displays that just use a web browser). The install script sets a cron job to launch a fullscreen Chromium window in kiosk mode at boot, disabling screen timeout. Configurables set during install:
 * Hide cursor (good for non-interactive displays)
 * Clear browser cache at boot
 * Refresh page at specified minute interval
