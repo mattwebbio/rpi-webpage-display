@@ -17,6 +17,8 @@ First, inspect the code located in the [Install.sh](https://github.com/mattwebbi
 ```
 bash -c "$(curl -s https://raw.githubusercontent.com/mattwebbio/rpi-webpage-display/master/Install.sh)"
 ```
+# Example
+I posted on my blog a *really* simple guide on using this for Google Calendar: https://blog.mattwebb.io/2018/08/24/raspberry-pi-google-calendar-display/
 
 # Modifying after install
 The 2 scripts called by cron (one for boot, optionally one for page refresh) are located in the user's home directory, at `~/rpi-webpage-display-atBoot.sh` and `~/rpi-webpage-display-Refresh.sh`. The page the browser is directed to can be adjusted in the `rpi-webpage-display-atBoot.sh` file, along with the other parameters. The refresh interval, if enabled, is pure cron and can be adjusted with the `crontab -e` command; see [here](https://help.ubuntu.com/community/CronHowto) for more info.
