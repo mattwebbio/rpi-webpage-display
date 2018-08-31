@@ -4,7 +4,7 @@ echo "Enter URL you'd like the browser to open at boot:"
 read pageURL
 printf -v pageURL "%q\n" "$pageURL"
 read -r -p "Hide cursor? (Good for non-interactive displays) [y/N] " hideCursor
-read -r -p "Clear browser cache at boot? [y/N] " hideCursor
+read -r -p "Clear browser cache at boot? [y/N] " clearCache
 read -p "How often (in minutes) do you want the page to refresh? (0 to disable): " refreshRate
 while ! [[ $refreshRate =~ ^-?[0-9]+$ ]]
 do
