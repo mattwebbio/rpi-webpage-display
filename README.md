@@ -1,3 +1,5 @@
+Update: Thanks [Adafruit](https://blog.adafruit.com/2018/08/31/simple-script-for-turning-pis-into-google-calendar-displays-piday-raspberrypi-raspberry_pi/) for sharing!
+
 # Raspberry Pi Webpage Display Script
 <img src="https://user-images.githubusercontent.com/420820/44598152-ed178d00-a786-11e8-98c2-c0e451904e3e.JPG" height="300" />
 I have Pi-powered Google Calendar displays all over the place - I wrote a script to make it easy to make more of them (or other similiar displays that just use a web browser). 
